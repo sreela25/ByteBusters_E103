@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us – The Grandeur Hotel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px;
+      background: #ffffff;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #eab308;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="home.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="amenities.html">Amenities</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Contact Us</h1>
+  <p style="text-align:center;">
+    We are here to assist you. Use the form below or reach us directly.
+  </p>
+
+  <div class="contact-grid">
+
+    <div class="info-card">
+      <h3>Our Address</h3>
+      <p>500 Grand Avenue</p>
+      <p>Downtown, NY 10001</p>
+
+      <h3>Phone</h3>
+      <p>+1-555-GRANDEUR</p>
+
+      <h3>Email</h3>
+      <p>info@grandeurhotel.com</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Send an Inquiry</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" rows="6" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p style="font-size:13px; color:#666;">
+        You can also click the AI concierge chat icon for instant help.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>The Grandeur Hotel</p>
+  <p>© 2026 All rights reserved.</p>
+</footer>
+
+</body>
+</html>
