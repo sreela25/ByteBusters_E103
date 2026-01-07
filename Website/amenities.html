@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amenities – The Grandeur Hotel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px;
+      background: #ffffff;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .amenity-card {
+      background: #f8f8f8;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .amenity-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      background: #eab308;
+      color: white;
+      border-radius: 6px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="home.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="amenities.html">Amenities</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Hotel Amenities</h1>
+  <p>Everything you need for a comfortable and relaxing stay</p>
+
+  <div class="amenities-grid">
+
+    <div class="amenity-card">
+      <img src="https://images.unsplash.com/photo-1578898887155-72e9a7da1fb3?w=800" alt="Swimming Pool">
+      <h3>Swimming Pool</h3>
+      <p>Open daily from 6:00 AM to 10:00 PM with lifeguard support.</p>
+      <a href="faq.html">
+        <button class="btn">Pool Policies</button>
+      </a>
+    </div>
+
+    <div class="amenity-card">
+      <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=800" alt="Fitness Center">
+      <h3>Modern Gym</h3>
+      <p>State-of-the-art fitness center accessible to all guests 24/7.</p>
+      <a href="pricing.html">
+        <button class="btn">View Membership Packages</button>
+      </a>
+    </div>
+
+    <div class="amenity-card">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800" alt="Restaurant">
+      <h3>Fine Dining Restaurant</h3>
+      <p>Multi-cuisine restaurant offering breakfast, lunch, and dinner.</p>
+      <a href="contact.html">
+        <button class="btn">Reserve Table</button>
+      </a>
+    </div>
+
+    <div class="amenity-card">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800" alt="WiFi">
+      <h3>High-Speed Wi-Fi</h3>
+      <p>Complimentary internet access available throughout the hotel.</p>
+      <a href="faq.html">
+        <button class="btn">Internet Support FAQ</button>
+      </a>
+    </div>
+
+    <div class="amenity-card">
+      <img src="https://images.unsplash.com/photo-1506812574058-fc75fa93fead?w=800" alt="Parking">
+      <h3>Secure Parking</h3>
+      <p>Underground monitored parking for guests and visitors.</p>
+      <a href="pricing.html">
+        <button class="btn">Check Parking Rates</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>The Grandeur Hotel</p>
+  <p>© 2026 All rights reserved.</p>
+</footer>
+
+</body>
+</html>

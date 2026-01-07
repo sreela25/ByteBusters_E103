@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rooms – The Grandeur Hotel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .room-card {
+      background: #f8f8f8;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding-bottom: 15px;
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      background: #eab308;
+      color: white;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Fixed Navbar -->
+<nav>
+  <a href="home.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="amenities.html">Amenities</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Our Rooms</h1>
+  <p>Choose from a range of comfortable and luxury accommodations</p>
+
+  <div class="room-grid">
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Standard Room">
+      <h3>Standard Room</h3>
+      <p>350 sq ft room with modern amenities, Wi-Fi, and breakfast</p>
+      <div class="price">$199 / night</div>
+      <a href="pricing.html">
+        <button class="btn">Check Pricing</button>
+      </a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1553444892-20174939d7bb?w=800" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>450 sq ft premium room with king bed and city views</p>
+      <div class="price">$299 / night</div>
+      <a href="pricing.html">
+        <button class="btn">Check Pricing</button>
+      </a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1587985064135-0366536eab42?w=800" alt="Executive Suite">
+      <h3>Executive Suite</h3>
+      <p>750 sq ft suite with separate living area and lounge access</p>
+      <div class="price">$499 / night</div>
+      <a href="pricing.html">
+        <button class="btn">Check Pricing</button>
+      </a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800" alt="Presidential Suite">
+      <h3>Presidential Suite</h3>
+      <p>Luxury 2,500 sq ft penthouse style suite with butler service</p>
+      <div class="price">$1499 / night</div>
+      <a href="pricing.html">
+        <button class="btn">Check Pricing</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>The Grandeur Hotel</p>
+  <p>Comfort – Luxury – Simplicity</p>
+  <p>© 2026 The Grandeur Hotel. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

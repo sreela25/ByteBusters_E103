@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home – The Grandeur Hotel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      flex-direction: column;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .primary {
+      background: #eab308;
+      color: white;
+    }
+
+    .outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .features {
+      padding: 100px 20px 40px 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .rooms {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .room-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="home.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="amenities.html">Amenities</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Welcome to The Grandeur Hotel</h1>
+    <p>Where luxury meets comfort in the heart of the city.</p>
+
+    <a href="rooms.html">
+      <button class="btn primary">Explore Rooms →</button>
+    </a>
+
+    <a href="contact.html">
+      <button class="btn outline">Book Your Stay</button>
+    </a>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <h2>Why Choose Us?</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1603079844980-7f7b0a4b7c2a?w=800" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
+      <h3>35+ Years Excellence</h3>
+      <p>Award-winning hospitality since 1985</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
+      <h3>250 Luxury Rooms</h3>
+      <p>Elegantly appointed accommodations</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
+      <h3>Trusted Service</h3>
+      <p>24/7 concierge and support</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1535827841776-24afc1e255ac?w=800" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
+      <h3>Industry Awards</h3>
+      <p>Recognized for quality and service</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Featured Rooms -->
+<section class="rooms">
+  <h2>Featured Accommodations</h2>
+  <p>Experience luxury in our signature rooms and suites</p>
+
+  <div class="room-grid">
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800">
+      <h3>Standard Room</h3>
+      <p>350 sq ft of comfort with modern amenities</p>
+      <p><b>$199 / night</b></p>
+      <a href="rooms.html">
+        <button class="btn outline">View Details</button>
+      </a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800">
+      <h3>Deluxe Room</h3>
+      <p>450 sq ft with premium features and city views</p>
+      <p><b>$299 / night</b></p>
+      <a href="rooms.html">
+        <button class="btn outline">View Details</button>
+      </a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dcab9?w=800">
+      <h3>Executive Suite</h3>
+      <p>750 sq ft with separate living area and lounge access</p>
+      <p><b>$499 / night</b></p>
+      <a href="rooms.html">
+        <button class="btn outline">View Details</button>
+      </a>
+    </div>
+
+  </div>
+
+  <div style="margin-top:20px;">
+    <a href="rooms.html">
+      <button class="btn primary">View All Rooms</button>
+    </a>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>500 Grand Avenue, Downtown, NY 10001</p>
+  <p>Phone: +1-555-GRANDEUR | Email: info@grandeurhotel.com</p>
+  <p>© 2026 The Grandeur Hotel. All rights reserved.</p>
+</footer>
+
+<!-- AI Chat Widget Mount -->
+<div id="chat-widget"></div>
+
+<script>
+  // simple placeholder to show bot necessity
+  document.getElementById("chat-widget").innerHTML =
+  "<p style='text-align:center; padding:20px;'>AI Concierge Chatbot will be integrated here.</p>";
+</script>
+
+</body>
+</html>
