@@ -194,7 +194,7 @@
       <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800">
       <h3>Standard Room</h3>
       <p>350 sq ft of comfort with modern amenities</p>
-      <p><b>$199 / night</b></p>
+      <p><b>Rs.199 / night</b></p>
       <a href="rooms.html">
         <button class="btn outline">View Details</button>
       </a>
@@ -204,7 +204,7 @@
       <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800">
       <h3>Deluxe Room</h3>
       <p>450 sq ft with premium features and city views</p>
-      <p><b>$299 / night</b></p>
+      <p><b>Rs.299 / night</b></p>
       <a href="rooms.html">
         <button class="btn outline">View Details</button>
       </a>
@@ -214,7 +214,7 @@
       <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dcab9?w=800">
       <h3>Executive Suite</h3>
       <p>750 sq ft with separate living area and lounge access</p>
-      <p><b>$499 / night</b></p>
+      <p><b>Rs.499 / night</b></p>
       <a href="rooms.html">
         <button class="btn outline">View Details</button>
       </a>
@@ -232,8 +232,8 @@
 
 <!-- Footer -->
 <footer>
-  <p>500 Grand Avenue, Downtown, NY 10001</p>
-  <p>Phone: +1-555-GRANDEUR | Email: info@grandeurhotel.com</p>
+  <p>500 Grand Avenue, Downtown, Coimbatore 621112</p>
+  <p>Phone: +91 8947524895 | Email: info@grandeurhotel.com</p>
   <p>© 2026 The Grandeur Hotel. All rights reserved.</p>
 </footer>
 
@@ -367,11 +367,11 @@ function getBotReply(text) {
 
   // ROOM PRICES
   if (text.includes("room") || text.includes("price") || text.includes("night"))
-    return "Room prices per night:\n• Standard: $80\n• Deluxe: $120\n• Suite: $180";
+    return "Room prices per night:\n• Standard: Rs.80\n• Deluxe: Rs.120\n• Suite: Rs.180";
 
   // PARKING
   if (text.includes("parking"))
-    return "Parking rates:\n• 1 Hour: $5\n• 24 Hours: $20\n• Weekly pass available.";
+    return "Parking rates:\n• 1 Hour: Rs.5\n• 24 Hours: Rs.20\n• Weekly pass available.";
 
   // PAYMENT
   if (text.includes("payment") || text.includes("pay"))
@@ -397,7 +397,7 @@ function getBotReply(text) {
 
   // CONTACT
   if (text.includes("contact") || text.includes("phone"))
-    return "You can contact us at +1-234-567-890 or email stayinn@example.com.";
+    return "You can contact us at +91 8947524895 or email stayinn@granduer.com.";
 
   return "I'm here to help 😊 Please ask about rooms, parking, prices, payments, or facilities.";
 }

@@ -1,0 +1,51 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the conversation, usually derived from the website being analyzed"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "The URL of the website being navigated"
+    },
+    "website_content": {
+      "type": "string",
+      "description": "Scraped content from the website for context"
+    },
+    "messages": {
+      "type": "array",
+      "description": "Array of conversation messages",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "website_url"
+  ]
+}

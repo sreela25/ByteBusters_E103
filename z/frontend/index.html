@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productivity Intelligence Agent</title>
+  <script>
+    async function loadSample() {
+      let res = await fetch("http://localhost:8000/load-sample", {
+        method: "POST"
+      });
+      let r = await res.json();
+      alert(r.status);
+    }
+
+    async function extractTasks() {
+      let text = document.getElementById("input").value;
+
+      let res = await fetch("http://localhost:8000/extract-tasks", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ text })
+      });
+
+      let r = await res.json();
+      document.getElementById("tasks").innerText =
+        JSON.stringify(r.tasks, null, 2);
+    }
+
+    async function getSuggestion() {
+      let res = await fetch("http://localhost:8000/recommend");
+      let r = await res.json();
+      document.getElementById("suggestion").innerText =
+        r.suggestion;
+    }
+
+    async function getInsights() {
+      let res = await fetch("http://localhost:8000/insights");
+      let r = await res.json();
+      document.getElementById("insights").innerText =
+        r.insights;
+    }
+  </script>
+
+  <style>
+    body { font-family: Arial; margin: 30px; background: #f3f4f6; }
+    .panel { background: white; padding: 15px; margin-top: 10px;
+             border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+    button { padding: 8px 12px; margin-right: 5px; }
+    textarea { width: 100%; height: 150px; }
+  </style>
+</head>
+
+<body>
+
+<h1>AI Personal Productivity Intelligence</h1>
+
+<div>
+  <button onclick="loadSample()">Load Sample Data</button>
+  <button onclick="extractTasks()">Extract Tasks</button>
+  <button onclick="getSuggestion()">What to Work On Next</button>
+  <button onclick="getInsights()">Work Habit Insights</button>
+</div>
+
+<div class="panel">
+  <h3>Paste Scattered Work Data Here:</h3>
+  <textarea id="input"></textarea>
+</div>
+
+<div class="panel">
+  <h3>Tasks Identified:</h3>
+  <pre id="tasks"></pre>
+</div>
+
+<div class="panel">
+  <h3>AI Suggestion:</h3>
+  <p id="suggestion"></p>
+</div>
+
+<div class="panel">
+  <h3>Habit Insights:</h3>
+  <p id="insights"></p>
+</div>
+
+</body>
+</html>
