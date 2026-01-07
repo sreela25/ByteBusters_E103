@@ -246,5 +246,164 @@
   "<p style='text-align:center; padding:20px;'>AI Concierge Chatbot will be integrated here.</p>";
 </script>
 
+<!-- CHATBOT BUTTON -->
+<div id="chatbot-toggle">💬</div>
+
+<!-- CHATBOT WINDOW -->
+<div id="chatbot-box">
+  <div id="chatbot-header">
+    StayInn Assistant
+    <span id="chatbot-close">✖</span>
+  </div>
+
+  <div id="chatbot-messages"></div>
+
+  <div id="chatbot-input">
+    <input type="text" id="userInput" placeholder="Ask about rooms, parking, prices..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<style>
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0d6efd;
+  color: #fff;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+#chatbot-box {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+}
+
+#chatbot-header {
+  background: #0d6efd;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+}
+
+#chatbot-messages {
+  height: 260px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chatbot-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+#chatbot-input button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+const chatbotBox = document.getElementById("chatbot-box");
+const messages = document.getElementById("chatbot-messages");
+
+document.getElementById("chatbot-toggle").onclick = () => {
+  chatbotBox.style.display = "block";
+  botMessage("Hello 👋 Welcome to StayInn! Ask me about rooms, parking, prices, or facilities.");
+};
+
+document.getElementById("chatbot-close").onclick = () => {
+  chatbotBox.style.display = "none";
+};
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const text = input.value.trim();
+  if (!text) return;
+
+  userMessage(text);
+  input.value = "";
+
+  setTimeout(() => {
+    botMessage(getBotReply(text));
+  }, 400);
+}
+
+function userMessage(text) {
+  messages.innerHTML += `<div><strong>You:</strong> ${text}</div>`;
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function botMessage(text) {
+  messages.innerHTML += `<div><strong>Bot:</strong> ${text}</div>`;
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function getBotReply(text) {
+  text = text.toLowerCase();
+
+  // ROOM PRICES
+  if (text.includes("room") || text.includes("price") || text.includes("night"))
+    return "Room prices per night:\n• Standard: $80\n• Deluxe: $120\n• Suite: $180";
+
+  // PARKING
+  if (text.includes("parking"))
+    return "Parking rates:\n• 1 Hour: $5\n• 24 Hours: $20\n• Weekly pass available.";
+
+  // PAYMENT
+  if (text.includes("payment") || text.includes("pay"))
+    return "We accept cash, credit/debit cards, and online payments.";
+
+  // CHECK-IN / CHECK-OUT
+  if (text.includes("check in"))
+    return "Check-in time is from 2:00 PM.";
+  if (text.includes("check out"))
+    return "Check-out time is until 11:00 AM.";
+
+  // FACILITIES
+  if (text.includes("facility") || text.includes("facilities"))
+    return "Our facilities include free Wi-Fi, swimming pool, gym, restaurant, parking, and 24/7 reception.";
+
+  // FAQ
+  if (text.includes("wifi"))
+    return "Yes, free high-speed Wi-Fi is available in all rooms.";
+  if (text.includes("breakfast"))
+    return "Breakfast is complimentary and served from 7:00 AM to 10:00 AM.";
+  if (text.includes("location"))
+    return "We are located near the city center with easy access to transport.";
+
+  // CONTACT
+  if (text.includes("contact") || text.includes("phone"))
+    return "You can contact us at +1-234-567-890 or email stayinn@example.com.";
+
+  return "I'm here to help 😊 Please ask about rooms, parking, prices, payments, or facilities.";
+}
+</script>
+<div id="chat-widget"></div>
+<script src="script.js"></script>
+
 </body>
 </html>
